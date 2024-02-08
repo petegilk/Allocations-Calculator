@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "pdf2json": "^3.0.5"
+    "pdf2json": "^3.0.5",
+    "require": "^2.4.20"
   }
 }
