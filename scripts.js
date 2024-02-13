@@ -1,11 +1,7 @@
 'use strict'
+import newOrder from './files/newOrder.json' assert { type: 'json' }
 
-
-// Node.js declarations
-
-// const fs = require('fs');
-// const PDFParser = require('pdf2json');
-
+console.log(newOrder)
 
 const orderInput = document.getElementById('orderInput');
 const invoiceInput = document.getElementById('invoiceInput');
