@@ -1,7 +1,12 @@
 'use strict'
 import newOrder from './files/newOrder.json' assert { type: 'json' }
 
-console.log(newOrder)
+const x = Object(newOrder.Pages[0].Texts);
+const y = x.map((i,x) => {
+    return i.R[0].T;
+})
+
+console.log(y)
 
 const orderInput = document.getElementById('orderInput');
 const invoiceInput = document.getElementById('invoiceInput');

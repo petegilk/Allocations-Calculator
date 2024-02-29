@@ -4,11 +4,11 @@
 const fs = require('fs');
 const PDFParser = require('pdf2json');
 
-const pdfParser = new PDFParser();
+const pdfParser = new PDFParser(this, 1);
 
 pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError) );
 pdfParser.on("pdfParser_dataReady", pdfData => {
-    fs.writeFileSync("./files/newOrder.json", JSON.stringify(pdfData));
+    fs.writeFileSync("./files/newOrder2.fields.json", JSON.stringify(pdfParser.getAllFieldsTypes()), () => {console.log("Done.");});
 });
 
 pdfParser.loadPDF("./files/ORD_138_22434164_20240206_2024020619332883.pdf");
